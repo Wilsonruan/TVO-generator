@@ -1,5 +1,6 @@
 var genText = document.getElementById('generator');
 var genClipText = document.getElementById('generatorClip');
+var teacherText = document.getElementById('generatorTeacher');
 var btnAdd = document.getElementById('add')
 var btnSubtract = document.getElementById('subtract')
 var input = document.querySelector('input')
@@ -17,13 +18,13 @@ function myCopyFunction1() {
 }
 
 
-btnAdd.addEventListener('click', () =>{
+btnAdd.addEventListener('click', () => {
   input.value = parseInt(input.value) + 1;
-}); 
+});
 
-btnSubtract.addEventListener('click', () =>{
+btnSubtract.addEventListener('click', () => {
   input.value = parseInt(input.value) - 1;
-}); 
+});
 
 function generate() {
   genText.value = `<div class="accordion" id="accordion${input.value}">
@@ -69,4 +70,16 @@ function generateClip() {
 
    </div>
  </div>`
+}
+
+function generateTeacher() {
+  var text = "";
+  var charset = "abcde";
+
+  text += charset.charAt(Math.floor(Math.random() * charset.length));
+  console.log(text)
+
+  teacherText.value = `<div class="teachernote_${text}">
+  <p class="sr-only">Note to teachers: See your teacher guide for collaboration tools, ideas and suggestions.</p>
+</div>`
 }

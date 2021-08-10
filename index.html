@@ -10,6 +10,15 @@
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 
+<nav id="navbar">
+  <ul>
+    <li><a class="nav-link" href="#Accordion">Accordion</a></li>
+    <li><a class="nav-link" href="#ClickReveal">ClickReveal</a></li>
+    <li><a class="nav-link" href="#TeacherNote">TeacherNote</a></li>
+  </ul>
+
+</nav>
+
 <body>
   <h1 class="text-center">TVO Generator</h1>
   <div class="text-center">
@@ -18,23 +27,42 @@
     <button id="add">+</button>
   </div>
   <div class="container">
-    <textarea class="form-control input-textarea" style="min-height: 500px;" readonly id="generator"
-      placeholder=""></textarea>
+    <section class="main-section" id="Accordion">
+      <h2>Accordion</h2>
+      <textarea class="form-control input-textarea" style="min-height: 500px;" readonly id="generator"
+        placeholder=""></textarea>
+      <br>
+      <button type="button" class="btn-lg btn-danger float-sm-left justify-content-center" id="generate"
+        onclick="generate()">Generate</button>
+      <button type="button" class="btn-lg btn-secondary float-sm-right justify-content-center" id="copy"
+        onclick="myCopyFunction()">Copy to Clipboard</button>
+    </section>
     <br>
-    <button type="button" class="btn-lg btn-danger float-sm-left justify-content-center" id="generate"
-      onclick="generate()">Generate</button>
-    <button type="button" class="btn-lg btn-secondary float-sm-right justify-content-center" id="copy"
-      onclick="myCopyFunction()">Copy to Clipboard</button>
+    <br>
+    <br>
+    <section class="main-section" id="ClickReveal">
+      <h2>ClickReveal</h2>
+      <textarea class="form-control input-textarea" style="min-height: 250px;" readonly id="generatorClip"
+        placeholder=""></textarea>
+      <br>
+      <button type="button" class="btn-lg btn-danger float-sm-left justify-content-center" id="generate"
+        onclick="generateClip()">Generate</button>
+      <button type="button" class="btn-lg btn-secondary float-sm-right justify-content-center" id="copy"
+        onclick="myCopyFunction1()">Copy to Clipboard</button>
+    </section>
     <br>
     <br>
     <br>
-    <textarea class="form-control input-textarea" style="min-height: 250px;" readonly id="generatorClip"
-      placeholder=""></textarea>
-    <br>
-    <button type="button" class="btn-lg btn-danger float-sm-left justify-content-center" id="generate"
-      onclick="generateClip()">Generate</button>
-    <button type="button" class="btn-lg btn-secondary float-sm-right justify-content-center" id="copy"
-      onclick="myCopyFunction1()">Copy to Clipboard</button>
+    <section class="main-section" id="TeacherNote">
+      <h2>TeacherNote</h2>
+      <textarea class="form-control input-textarea" style="min-height: 250px;" readonly id="generatorTeacher"
+        placeholder=""></textarea>
+      <br>
+      <button type="button" class="btn-lg btn-danger float-sm-left justify-content-center" id="generate"
+        onclick="generateTeacher()">Generate</button>
+      <button type="button" class="btn-lg btn-secondary float-sm-right justify-content-center" id="copy"
+        onclick="myCopyFunction2()">Copy to Clipboard</button>
+    </section>
   </div>
 
   <script src="javascript.js"></script>
