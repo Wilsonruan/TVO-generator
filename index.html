@@ -12,20 +12,31 @@
 
 <body>
   <h1 class="text-center">TVO Generator</h1>
-  <div class="container">
-    <textarea class="form-control input-textarea" style="min-height: 500px;" readonly id="generator"
-      placeholder=""></textarea>
-      <br>
-      <button type="button" class="btn-lg btn-danger float-sm-left justify-content-center" id="generate"
-      onclick="generate()">Generate</button>
-      <button type="button" class="btn-lg btn-secondary float-sm-right justify-content-center" id="copy"
-      onclick="myCopyFunction()">Copy to Clipboard</button>
-  </div>
   <div class="text-center">
     <button id="subtract">-</button>
     <input type="number" value="1">
     <button id="add">+</button>
   </div>
+  <div class="container">
+    <textarea class="form-control input-textarea" style="min-height: 500px;" readonly id="generator"
+      placeholder=""></textarea>
+    <br>
+    <button type="button" class="btn-lg btn-danger float-sm-left justify-content-center" id="generate"
+      onclick="generate()">Generate</button>
+    <button type="button" class="btn-lg btn-secondary float-sm-right justify-content-center" id="copy"
+      onclick="myCopyFunction()">Copy to Clipboard</button>
+    <br>
+    <br>
+    <br>
+    <textarea class="form-control input-textarea" style="min-height: 250px;" readonly id="generatorClip"
+      placeholder=""></textarea>
+    <br>
+    <button type="button" class="btn-lg btn-danger float-sm-left justify-content-center" id="generate"
+      onclick="generateClip()">Generate</button>
+    <button type="button" class="btn-lg btn-secondary float-sm-right justify-content-center" id="copy"
+      onclick="myCopyFunction1()">Copy to Clipboard</button>
+  </div>
+
   <script src="javascript.js"></script>
 </body>
 
